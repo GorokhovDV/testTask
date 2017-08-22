@@ -57,7 +57,7 @@ class Helpers {
         $cal = [];
         $week = -1;
         $mountStart = $mountEnd = false;
-        while($j<date("t")){
+        while($j<date("t",$timestamp)){
             $week++;
             for($i = 1; $i<=7;$i++){
                 if(($mountStart === false && date("N",strtotime(date("01.m.Y",$timestamp))) > $i) || ($mountEnd === true && date("t",$timestamp) < ($week*7+$i))){
